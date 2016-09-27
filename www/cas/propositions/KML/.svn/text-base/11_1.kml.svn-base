@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>Col du Grand-St-Bernard - Lacs de Fen�tre - Col du Grand-St-Bernard</name>
+<visibility>1</visibility>
+<open>1</open>
+<description></description>
+<NetworkLink>
+<name>Weg-Information</name>
+<visibility>1</visibility>
+<flyToView>1</flyToView>
+<Link>
+<href>http://search.alpmove.ch/trail/am01/gmap/am01_000972A.kml</href>
+<refreshMode>onInterval</refreshMode>
+<refreshInterval>3600</refreshInterval>
+</Link>
+</NetworkLink>
+##FOLDER2##
+</Document>
+</kml>

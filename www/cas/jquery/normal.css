@@ -1,0 +1,36 @@
+body { 
+    font-size: 200% !important;
+}
+
+#partie2_propo {
+    height: 730px !important;
+}
+
+#partie2 {
+    height: 440px !important;
+}
+
+#transport {
+    left: 250px !important;
+}
+
+a.infobulle span {
+    display: none;
+}
+
+a.infobulle:hover span {
+    display: block;
+    position: absolute;
+    top: 220px;
+    left: 2px;
+    border: 1px solid #000;
+    background-color: #FFF;
+    text-align: justify;
+    font-weight: none;
+    padding: 5px;
+}
+
+#carteBureau {
+    height: 500px;
+    width: 750px;
+}
