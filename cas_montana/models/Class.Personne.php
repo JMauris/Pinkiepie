@@ -9,23 +9,12 @@ class Personne{
   private $email;
   private $password;
 
-  private $adresse;
-  private $localite;
-  private $npa;
 
-  private $portable;
-  private $phone;
-
-  private $numMember;
-  private $estActif;
-  private $role;
-
-  private $idxAbonnement;
   private $idxLangue;
 
   //It uses null as the default value for the function argument $id
   public function __construct($id=null, $firstname, $lastname,
-                              $email, $password, $adresse, $npa){
+                              $email, $password){
 
       $this->setId($id);
 
@@ -35,9 +24,7 @@ class Personne{
       $this->setEmail($email);
       $this->setPassword($password);
 
-      $this->setAdresse($adresse);
-    //  $this->setLocalite($localite);
-    $this->setNpa($npa);
+
 
 
 

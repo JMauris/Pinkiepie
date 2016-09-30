@@ -3,7 +3,7 @@ include_once ROOT_DIR.'global/header.php';
 
 //Collect data from controller and session
 $msg = $this->vars['msg'];
-$user = $_SESSION['personne']; //<h1>Welcome <?php echo ' '.$user->getFirstname().' '.$user->getLastname();?>
+$user = $_SESSION['personne'];
 ?>
 <br><br>
 	<table align="center">
