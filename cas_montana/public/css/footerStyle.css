@@ -1,0 +1,33 @@
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+padding: 0;
+
+  background-color: #efefef;
+
+}
+
+.ulf
+{
+  list-style-type: none;
+
+  overflow: hidden;
+
+}
+
+.lif {
+    list-style-type: none;
+    float:right;
+
+}
+
+.af {
+display: block;
+    color: #606060 ;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+
+}
