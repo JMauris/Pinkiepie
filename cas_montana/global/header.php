@@ -1,6 +1,12 @@
 
 <!DOCTYPE html>
+<?php
 
+
+//Collect data from controller and session
+$msg = $this->vars['msg'];
+$hrefLogout = URL_DIR."login/logout";
+?>
 
 <html>
     <head>
@@ -24,13 +30,18 @@
             echo  '<li class="lih"><a class="ah" href="#MyProposal">MyProposal</a></li>';
         }?>
         <li class="lih"><a class="ah" href="#contact">Contact</a></li>
-        <li class="lih"><a class="ah" href="#about">About</a></li>
-        <li class="lih"><a class="ah" href="#Profil">Profil</a></li>
+        <li class="lih"><a class="ah"  href="#about">About</a></li>
+        <li class="lih"><a class="ah" href="#about">Profil</a></li>
         <?php if(isset($_SESSION["personne"]))
+
         {
-            echo  '<li class="lih"><a class="ah" href="#MyProposal">MyProposal</a></li>';
-        }?>
-        <c><a class="ah" href="#log">Login</a></c>
+          echo  '<c><a class="ah" href="' .$hrefLogout. ' ">Logout</a></c> ' ;
+        }
+        else {
+         echo  '<c><a class="ah" href="#log">Login</a></c>';
+        }
+
+        ?>
       </ul>
 
     </body>
