@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+h1{
+	color:black; 
+	text-align:center; 
+	padding-top:50px
+}
+
+table{
+	border-spacing:10px;
+}
+
+div{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: rgba(235,235,235,0.7);
+	font-family: "Times New Roman", Times, serif;
+	font-style: normal;
+	font-size: 18px;
+}
+
+body {
+	height: 700px;
+	background: url('http://localhost/cas_montana/background.jpg') no-repeat !important;
+	background-position: center;
+}

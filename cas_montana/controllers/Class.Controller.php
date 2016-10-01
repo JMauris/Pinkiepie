@@ -24,8 +24,12 @@ class Controller {
      */
     function display(){
     	$view = "{$this->controller}/{$this->method}.php";
-    	if(file_exists('views/'.$view))
+
+    	if(file_exists('views/'.$view)){
 			include 'views/'.$view;
+
+    }
+  
     }
 
     /**
@@ -35,6 +39,7 @@ class Controller {
      */
     function redirect($controller, $method) {
     	$url = "Location: " . URL_DIR. $controller . '/' .$method;
+
     	header($url);
     }
 

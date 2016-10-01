@@ -3,9 +3,7 @@
 <?php
 
 
-//Collect data from controller and session
-$msg = $this->vars['msg'];
-$hrefLogout = URL_DIR."login/logout";
+
 ?>
 
 <html>
@@ -19,26 +17,27 @@ $hrefLogout = URL_DIR."login/logout";
     </head>
     <body>
       <ul class="ulh">
-        <li class="lih"><a class="ah" href="#Program">Program</a></li>
+        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'mainPage/mainPage'?>">Home</a></li>
+        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'programm/programm'?>">Program</a></li>
         <?php if(isset($_SESSION["personne"]))
         {
-            echo  '<li class="lih"><a class="ah" href="#MyProgram">My Program</a></li>';
+            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."myProgram/myProgram". ' ">My Program</a></li>';
         }?>
-        <li class="lih"><a class="ah" href="#Proposal">Proposal</a></li>
+        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'proposal/proposal'?>">Proposal</a></li>
         <?php if(isset($_SESSION["personne"]))
         {
-            echo  '<li class="lih"><a class="ah" href="#MyProposal">MyProposal</a></li>';
+            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."myProposal/myProposal". ' "">MyProposal</a></li>';
         }?>
-        <li class="lih"><a class="ah" href="#contact">Contact</a></li>
-        <li class="lih"><a class="ah"  href="#about">About</a></li>
-        <li class="lih"><a class="ah" href="#about">Profil</a></li>
+        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'contact/contact'?>">Contact</a></li>
+        <li class="lih"><a class="ah"  href="<?php echo URL_DIR.'about/about'?>">About</a></li>
+        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'profil/profil'?>">Profil</a></li>
         <?php if(isset($_SESSION["personne"]))
 
         {
-          echo  '<c><a class="ah" href="' .$hrefLogout. ' ">Logout</a></c> ' ;
+          echo  '<c><a class="ah" href="' .URL_DIR."login/logout". ' ">Logout</a></c> ' ;
         }
         else {
-         echo  '<c><a class="ah" href="#log">Login</a></c>';
+         echo  '<c><a class="ah" href="' . URL_DIR."login/login". ' ">Login</a></c>';
         }
 
         ?>
