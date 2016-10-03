@@ -8,7 +8,7 @@
 		</head>
 		<body>
 			<div style="height: 600px;">
-				<h1>Welcome to CasMontana!</h1>
+				<h1>Welcome to CAS Montana!</h1>
 				<br>
 				<p>
 					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
