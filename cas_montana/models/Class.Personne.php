@@ -11,46 +11,58 @@ class Personne{
 
 
   private $idxLangue;
+  private $estActif;
+
+  private $numMember;
+
+  private $role;
+
+
+  private $portable;
+  private $phone;
+
+  private $adresse;
+  private $localite;
+  private $npa;
+
+
+
+  private $idxAbonnement;
+
+
+
 
   //It uses null as the default value for the function argument $id
   public function __construct($id=null, $firstname, $lastname,
-                              $email, $password){
+                              $email, $password, $idxLangue, $estActif, $numMember, $role,
+                               $portable, $phone, $adresse, $localite, $npa, $idxAbonnement){
 
       $this->setId($id);
-
       $this->setFirstname($firstname);
       $this->setLastname($lastname);
 
+
       $this->setEmail($email);
+
       $this->setPassword($password);
 
+      $this->setIdxLangue($idxLangue);
+      $this->setEstActif($estActif);
 
+      $this->setNumMember($numMember);
 
+      $this->setRole($role);
 
+      $this->setPortable($portable);
+      $this->setPhone($phone);
+
+      $this->setAdresse($adresse);
+      $this->setLocalite($localite);
+      $this->setNpa($npa);
+
+      $this->setIdxAbonnement($idxAbonnement);
 
       }
-
-//It uses null as the default value for the function argument $id
-/*public function __construct($id=null, $firstname=null, $lastname=null, $email=null, $password=null,
-                            $adresse=null, $localite=null, $NPA=null, $portable=null, $phone=null, $numMember=null,
-                            $estActif=null, $role=null, $idxAbonnement=null, $idxLangue){
-
-
-
-    $this->setNPA($NPA);
-
-    $this->setPortable($portable);
-    $this->setPhone($phone);
-
-    $this->setNumMember($numMember);
-    $this->setEstActif($estActif);
-    $this->setRole($role);
-
-    $this->setIdxAbonnement($idxAbonnement);
-    $this->setIdxLangue($idxLangue);
-    }
-
-*/
 
 
   //id
@@ -111,7 +123,7 @@ class Personne{
  }
 
  public function setLocalite($localite){
-   $this->localite->$localite;
+   $this->localite=$localite;
  }
 
 
@@ -121,7 +133,7 @@ class Personne{
  }
 
   public function setNpa($npa){
-    $this->npa->$npa;
+    $this->npa=$npa;
   }
 
   public function getPortable()
@@ -130,7 +142,7 @@ class Personne{
   }
 
    public function setPortable($portable){
-     $this->portable->$portable;
+     $this->portable= $portable;
    }
 
    public function getPhone()
@@ -139,7 +151,7 @@ class Personne{
    }
 
     public function setPhone($phone){
-      $this->Phone->$phone;
+      $this->phone=$phone;
     }
 
     public function getNumMember(){
@@ -190,22 +202,12 @@ public static function connect($adressEmail,$pwd){
   if(!$row) return false;
 
   return new Personne($row['idPersonne'], $row['prenom'], $row['nom'],$row['email'], $row['motDePasse']
-                      , $row['adresse'], $row['Localite'] , $row['NPA']); /*, $row['portable'], $row['telephone'], $row['numMembre'],
-                      $row['estActif'], $row['role'], $row['idxAbonnement'], $row['idxLangue']);*/
+                      , $row['idxLangue'], $row['estActif'] , $row['numMembre'], $row['role'], $row['portable'],
+                       $row['telephone'], $row['adresse'], $row['localite'], $row['NPA'], $row['idxAbonnement']);
 
 
-                      /*, $row['NPA']); /*, $row['portable'], $row['telephone'], $row['numMembre'],
-                      $row['estActif'], $row['role'], $row['idxAbonnement'], $row['idxLangue']);*/
 }
 
-
-/*	public function save(){
-		$pwd = sha1($this->password);
-		$query = "INSERT into user(firstname, lastname, username, password)
-		VALUES('$this->firstname', '$this->lastname', '$this->username', '$pwd');";
-
-		return  MySqlConn::getInstance()->executeQuery($query);
-	}*/
 
 
 
