@@ -2,13 +2,7 @@
 
 ?>
 
-
-<h1>
-Programm
-</h1>
-
-
-
+<h1>Search Proposal</h1>
 
 <?php
 unset($_SESSION['msg']);
