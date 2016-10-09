@@ -4,15 +4,7 @@
 $msg = $this->vars['msg'];
 
 ?>
-<head>
-	<meta charset="UTF-8">
-	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
-
-</head>
-<body>
-	<br><br>
-<div>
+<br><br>
 <form action="<?php echo URL_DIR.'login/connection';?>" method="post">
 	<table align="center">
 		<tr>
@@ -28,9 +20,7 @@ $msg = $this->vars['msg'];
 		</tr>
 	</table>
 </form>
-<br><br>
-</div>
-</body>
+<br/><br/><br/><br/>
 <?php
 unset($_SESSION['msg']);
 include_once ROOT_DIR.'global/footer.php';

@@ -7,11 +7,6 @@ class myProgramController extends Controller{
    */
   function myProgram(){
 
-    //The page cannot be displayed if no user connected
-    if(!$this->getActiveUser()){
-      $this->redirect('login', 'login');
-      exit;
-    }
   }
 
 

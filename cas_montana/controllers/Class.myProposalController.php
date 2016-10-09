@@ -7,11 +7,6 @@ class myProposalController extends Controller{
    */
   function myProposal(){
 
-    //The page cannot be displayed if no user connected
-    if(!$this->getActiveUser()){
-      $this->redirect('login', 'login');
-      exit;
-    }
   }
 
 
