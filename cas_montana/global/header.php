@@ -30,7 +30,11 @@
         }?>
         <li class="lih"><a class="ah" href="<?php echo URL_DIR.'contact/contact'?>">Contact</a></li>
         <li class="lih"><a class="ah"  href="<?php echo URL_DIR.'about/about'?>">About</a></li>
-        <li class="lih"><a class="ah" href="<?php echo URL_DIR.'profil/profil'?>">Profil</a></li>
+        <?php if(isset($_SESSION["personne"]))
+        {
+            echo  '<li class="lih"><a class="ah" href="' .URL_DIR."profil/profil". ' "">Profil</a></li>';
+            }?>
+
         <?php if(isset($_SESSION["personne"]))
 
         {
