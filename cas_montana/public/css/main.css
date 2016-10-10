@@ -6,71 +6,21 @@ h1{
 	padding-top:50px
 }
 
-h2{
-	color:black;
-	text-align:center
-}
-
 table{
 	border-spacing:10px;
 }
-div#button{
-	background-color: transparent;
-}
-
-div#proposedlist{
-	width: 95%;
-	background-color: transparent;
-	font-family: "Times New Roman", Times, serif;
-	font-style: normal;
-	font-size: 18px;
-}
-
-div#list{
-	width: 90%;
-	background-color: transparent;
-	font-family: "Times New Roman", Times, serif;
-	font-style: normal;
-	font-size: 18px;
-}
-div#list:hover{
-	width: 98%;
-	background-color: transparent);
-	font-family: "Times New Roman", Times, serif;
-	font-style: normal;
-	font-size: 18px;
-}
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: unone;
-}
-
-a:active {
-    text-decoration: none;
-}
 
 div{
-	width: 80%;
+	width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: 50px;
+	padding-right: 50px;
 	background-color: rgba(235,235,235,0.7);
 	font-family: "Times New Roman", Times, serif;
 	font-style: normal;
 	font-size: 18px;
 }
-
-button{
-	border-radius: 8px;
-	font-size: 24px;
-}
-
 
 body {
 	height: 700px;

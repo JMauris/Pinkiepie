@@ -8,7 +8,7 @@ class Personne{
 
   private $email;
   private $password;
-  
+
   private $role;
 
 
