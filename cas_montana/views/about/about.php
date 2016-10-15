@@ -1,8 +1,4 @@
-<?php include_once ROOT_DIR.'global/header.php';
-
-
-?>
-
+<?php include_once ROOT_DIR.'global/header.php';?>
 
 <html>
 	<head>
@@ -11,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="http://localhost/cas_montana/public/css/main.css">
 	</head>
 	<body>
-		<div style="height: 700px;">
+		<div style="height: 760px;">
 			<h1>Information about SAC</h1>
 			<br>
 			<table>
@@ -86,8 +82,4 @@
 	</body>
 </html>
 
-
-<?php
-unset($_SESSION['msg']);
-include_once ROOT_DIR.'global/footer.php';
-?>
+<?php unset($_SESSION['msg']); include_once ROOT_DIR.'global/footer.php';?>

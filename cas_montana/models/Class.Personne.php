@@ -145,7 +145,7 @@ class Personne{
    }
 
     public function setPhone($phone){
-      $this->phone=$phone;
+      $this->phone= $phone;
     }
 
     public function getNumMember(){
@@ -199,6 +199,23 @@ public static function connect($adressEmail,$pwd){
                       , $row['idxLangue'], $row['estActif'] , $row['numMembre'], $row['role'], $row['portable'],
                        $row['telephone'], $row['adresse'], $row['localite'], $row['NPA'], $row['idxAbonnement']);
 
+
+}
+
+public function update($id){
+
+  $query = "UPDATE personne
+            SET email= '$this->email',
+                portable= '$this->portable',
+                telephone='$this->phone',
+                adresse='$this->adresse',
+                localite='$this->localite',
+                NPA='$this->npa',
+                idxAbonnement='$this->idxAbonnement'
+            WHERE idPersonne='$id'
+            ;";
+
+  return  MySqlConn::getInstance()->executeQuery($query);
 
 }
 

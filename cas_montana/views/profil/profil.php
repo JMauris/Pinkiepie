@@ -1,7 +1,9 @@
 <?php include_once ROOT_DIR.'global/header.php';
 $user = $_SESSION['personne'];
 
+
 ?>
+
 <head>
 	<meta charset="UTF-8">
 	<title>SAC Info</title>
@@ -15,7 +17,7 @@ $user = $_SESSION['personne'];
 <h1> My Profil</h1>
 
 
-<form method="post" action="<?php echo URL_DIR.'profil/profil';?>">
+<form method="post" action="<?php echo URL_DIR.'profil/save';?> " onsubmit="alert('Saved')">
 	<table align="center">
 
 		<tr>
@@ -69,19 +71,6 @@ for ($cpt=0; $cpt<=3; $cpt++) {
 ?>
 </SELECT>
 </FORM>
-<select name="age">
-<?php
-$valeurChoisie = 20;
-for ($i=7; $i<=77; $i++) {
-if ($i == $valeurChoisie) {
-echo '<option value="'.$i.'" selected="selected">'.$i.'</option>';
-} else {
-echo '<option value="'.$i.'">'.$i.'</option>';
-}
-}
-?>
-</select>
-
 </th></br>
 	</tr>
       <tr>

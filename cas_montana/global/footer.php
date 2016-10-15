@@ -15,8 +15,7 @@
     <ul class="=ulf">
         <li class="lif"><a class="af" href="#deutsh">DE</a></li>
         <li class="lif"><a class="af" href="#francais">FR</a></li>
-        <li class="lif"><a class="af" href="#italien">IT</a></li>
-        <li class="lif"><a class="af" href="#englis">EN</a></li>
+      
   </ul>
 
 

@@ -33,9 +33,9 @@
         <?php if(isset($_SESSION["personne"]))
         {
             echo  '<li class="lih"><a class="ah" href="' .URL_DIR."profil/profil". ' "">Profil</a></li>';
-            }?>
+            }
 
-        <?php if(isset($_SESSION["personne"]))
+        if(isset($_SESSION["personne"]))
 
         {
           echo  '<c><a class="ah" href="' .URL_DIR."login/logout". ' ">Logout</a></c> ' ;

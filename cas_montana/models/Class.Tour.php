@@ -44,7 +44,7 @@ class Tour
 
 
 
-  function __construct($id,
+  function __construct($id=null,
                         $arriveeHeure, $codeprogramme, $dateDebut, $dateFin, $dateLimiteInscr,
                         $departHeure, $descente, $description_de, $description_fr, $difficulte,
                         $duree, $idxArriveeLocalite, $idxAssistant, $idxDepartLocalite, $idxGuide,
@@ -72,7 +72,7 @@ class Tour
     $this->setDifficulte($difficulte);
 
     $this->setDuree($duree);
-    $this->setIdxArriveeLodalit($idxArriveeLocalite);
+    $this->setIdxArriveeLocalite($idxArriveeLocalite);
     $this->setIdxAssistant($idxAssistant);
     $this->setIdxDepartLocalite($idxDepartLocalite);
     $this->setIdxGuide($idxGuide);
@@ -86,7 +86,7 @@ class Tour
     $this->setLienCarte($lienCarte);
     $this->setLieuRDV($lieuRDV);
     $this->setMontee($montee);
-    $this->setPrixMay($prixMax);
+    $this->setPrixMax($prixMax);
     $this->setPrixMin($prixMin);
 
     $this->setSoustitre($soustitre);
@@ -96,7 +96,7 @@ class Tour
     $this->setTransportDepart($transportDepart);
 
   }
-}
+
 
 //id
 public function getId(){
@@ -136,7 +136,7 @@ public function getDateDebut(){
   return $this->dateDebut;
 }
 
-public function setId($dateDebut)
+public function setDateDebut($dateDebut)
 {
   $this->dateDebut= $dateDebut;
 }
@@ -462,4 +462,74 @@ public static function connectbyId($id)
 }
 
 
- ?>
+//return and array
+public static function connectbyIdType($idxTypeTour)
+{
+  $query =  "SELECT * From tour WHERE idTypeTour='$idxTypeTour' ";
+  $result = MySqlConn::getInstance()->selectDB($query);
+
+  //todo
+
+
+}
+//if programm 1 or and 2 // proposal 6
+public static function connectTour($idTour1, $idTour2)
+{
+
+  if($idTour1==null && $idTour2 == null)
+  {
+    $query =  Tour::queryAll();
+  }
+    elseif ( $idTour2 == null) {
+    $query =  Tour::queryOne($idTour1);
+    }
+    else {
+    $query = Tour::queryTwo($idTour1, $idTour2);
+    }
+
+  $result = MySqlConn::getInstance()->selectDB($query);
+
+
+  while($row = $result->fetch())
+  {
+    $resultArray[] =   new Tour($row['idTour'],
+                $row['arriveeHeure'], $row['codeprogramme'],$row['dateDebut'], $row['dateFin'], $row['dateLimiteInscr'],
+                $row['departHeure'], $row['descente'],$row['description_de'], $row['description_fr'], $row['difficulte'],
+                $row['duree'], $row['idxArriveeLocalite'],$row['idxAssistant'], $row['idxDepartLocalite'], $row['idxGuide'],
+                $row['idxTypeTour'], $row['idxTypeTransport'],$row['information_de'], $row['information_fr'], $row['inscriptionMax'],
+                $row['lienCarte'], $row['lieuRDV'],$row['montee'], $row['prixMax'], $row['prixMin'],
+                $row['soustitre'], $row['status'],$row['titre'], $row['transportArrivee'], $row['transportDepart']);
+
+                }
+
+                $result->closeCursor();
+
+return $resultArray;
+
+}
+
+private static function queryAll()
+{
+  $query =  "SELECT * From tour ";
+
+  return $query;
+}
+
+private static function queryOne($idTour1)
+{
+  $query =  "SELECT * From tour
+              where idxTypeTour = 1";
+
+  return $query;
+}
+private static function queryTwo($idTour1, $idTour2)
+{
+  $query =  "SELECT * From tour
+              where idxTypeTour = 1
+              or idxTypeTour = 2";
+
+  return $query;
+}
+}
+
+?>

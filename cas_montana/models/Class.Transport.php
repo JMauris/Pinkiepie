@@ -58,7 +58,7 @@ class transport
     if(!$row) return false;
 
 
-    return new Typeretour($row['idTransport'],$row['transport_de'],$row['transport_fr'],)
+    return new Typeretour($row['idTransport'],$row['transport_de'],$row['transport_fr']);
 
   }
 

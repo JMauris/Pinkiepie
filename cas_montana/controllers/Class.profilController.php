@@ -17,6 +17,35 @@ class profilController extends Controller{
   }
 
 
+  function save()
+
+  { //update
+    $user = $_SESSION['personne'];
+
+    $adress=$_POST['adress'];
+    $npa = $_POST['npa'];
+    $locality = $_POST['localite'];
+    $phone = $_POST['phone'];
+    $mobile = $_POST['mobile'];
+
+
+
+
+      $user->setAdresse($adress);
+      $user->setNpa($npa);
+      $user->setLocalite($locality);
+      $user->setPhone($phone);
+      $user->setPortable($mobile);
+
+
+      $user->update($user->getId());
+    
+
+	     $this->redirect('profil', 'profil');
+
+  }
+
+
 
 
 
